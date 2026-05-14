@@ -36,10 +36,17 @@ header{
     font-weight:bold;
 }
 
+/* NAVBAR */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
     font-weight:bold;
     transition:0.3s;
 }
@@ -101,54 +108,58 @@ footer{
     line-height:1.8;
 }
 
-/* ================= RESPONSIVE HP ================= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:768px){
 
     header{
         flex-direction:column;
         padding:20px;
-        text-align:center;
+        gap:15px;
     }
 
     .logo{
         font-size:24px;
+        text-align:center;
     }
 
     nav{
-        margin-top:15px;
         display:flex;
-        flex-direction:column;
-        gap:10px;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:15px;
     }
 
     nav a{
-        margin-left:0;
-        font-size:16px;
+        font-size:14px;
     }
 
     .hero{
         height:auto;
-        padding:80px 20px;
+        min-height:80vh;
+        padding:60px 20px;
     }
 
     .hero h1{
         font-size:38px;
+        line-height:1.3;
     }
 
     .hero p{
         width:100%;
         font-size:16px;
+        line-height:1.7;
     }
 
     button{
         width:100%;
-        max-width:300px;
+        max-width:280px;
         font-size:15px;
     }
 
     footer{
-        font-size:14px;
+        font-size:13px;
         padding:15px;
     }
 
