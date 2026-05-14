@@ -20,26 +20,32 @@ body{
 }
 
 /* HEADER */
-
 header{
     background:#0d0d0d;
     border-bottom:2px solid #f5c400;
-    padding:20px 50px;
+    padding:20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .logo{
     color:#f5c400;
-    font-size:28px;
+    font-size:22px;
     font-weight:bold;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
     font-weight:bold;
 }
 
@@ -48,67 +54,98 @@ nav a:hover{
 }
 
 /* TITLE */
-
 .title{
     text-align:center;
-    margin-top:40px;
+    margin-top:30px;
 }
 
 .title h1{
     color:#f5c400;
-    font-size:50px;
+    font-size:40px;
 }
 
-/* KEGIATAN */
-
+/* CONTAINER */
 .kegiatan-container{
     width:90%;
     margin:auto;
-    padding:50px 0;
+    padding:40px 0;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
 }
 
+/* CARD */
 .kegiatan{
     display:flex;
     align-items:center;
-    gap:40px;
-    margin-bottom:80px;
-}
-
-.kegiatan img{
-    width:350px;
+    gap:30px;
+    background:#111;
+    padding:20px;
     border-radius:20px;
-    border:3px solid #f5c400;
-    box-shadow:0 0 15px rgba(245,196,0,0.3);
+    border:2px solid #f5c400;
 }
 
+/* GAMBAR */
+.kegiatan img{
+    width:320px;
+    max-width:100%;
+    border-radius:15px;
+    border:3px solid #f5c400;
+}
+
+/* TEKS */
 .text{
     flex:1;
 }
 
 .text h2{
     color:#f5c400;
-    margin-bottom:15px;
-    font-size:35px;
+    margin-bottom:10px;
+    font-size:28px;
 }
 
 .text p{
-    line-height:1.8;
-    font-size:18px;
+    line-height:1.7;
+    font-size:16px;
 }
 
-/* ZIGZAG */
-
+/* ZIGZAG (HANYA DESKTOP) */
 .kanan{
     flex-direction:row-reverse;
 }
 
 /* FOOTER */
-
 footer{
-    margin-top:50px;
+    margin-top:40px;
     text-align:center;
     padding:25px;
     border-top:2px solid #f5c400;
+}
+
+/* RESPONSIVE HP */
+@media (max-width:768px){
+
+    header{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .title h1{
+        font-size:28px;
+    }
+
+    .kegiatan{
+        flex-direction:column !important;
+        text-align:center;
+    }
+
+    .kegiatan img{
+        width:100%;
+    }
+
+    .text h2{
+        font-size:22px;
+    }
 }
 
 </style>
@@ -135,140 +172,60 @@ footer{
 
 <div class="kegiatan-container">
 
-<!-- KEGIATAN 1 -->
-
-<div class="kegiatan kiri">
-
+<div class="kegiatan">
 <img src="img1/ldko.jpg">
-
 <div class="text">
-
 <h2>LDKO</h2>
-
-<p>
-Latihan Dasar Kepemimpinan Siswa merupakan kegiatan
-untuk membentuk karakter kepemimpinan, disiplin,
-dan kerja sama antar anggota OSIS.
-</p>
-
+<p>Latihan Dasar Kepemimpinan Siswa merupakan kegiatan untuk membentuk karakter kepemimpinan, disiplin, dan kerja sama antar anggota OSIS.</p>
 </div>
-
 </div>
-
-<!-- KEGIATAN 2 -->
 
 <div class="kegiatan kanan">
-
 <img src="img1/porak.jpg">
-
 <div class="text">
-
 <h2>Porak</h2>
-
-<p>
-Porak adalah perlombaan antar kelas yang diadakan
-setelah ujian semester untuk meningkatkan solidaritas
-dan sportivitas siswa.
-</p>
-
+<p>Porak adalah perlombaan antar kelas yang diadakan setelah ujian semester untuk meningkatkan solidaritas dan sportivitas siswa.</p>
+</div>
 </div>
 
-</div>
-
-<!-- KEGIATAN 3 -->
-
-<div class="kegiatan kiri">
-
+<div class="kegiatan">
 <img src="img1/mieling.jpg">
-
 <div class="text">
-
 <h2>Mieling Poe Basa Indung</h2>
-
-<p>
-Kegiatan OSIS untuk siswa unuk merayakan hari bahasa ibu
-Internasional dan untuk melestarikan budaya daerah.
-</p>
-
+<p>Kegiatan OSIS untuk merayakan hari bahasa ibu internasional dan melestarikan budaya daerah.</p>
 </div>
-
 </div>
-
-<!-- KEGIATAN 4 -->
 
 <div class="kegiatan kanan">
-
 <img src="img1/upskill.jpg">
-
 <div class="text">
-
-<h2>Upgradding Skill</h2>
-
-<p>
-Upgrading skill merupakan program kerja untuk meningkatkan
-soft skill dan hard skill untuk pengurus OSIS
-</p>
-
+<h2>Upgrading Skill</h2>
+<p>Program kerja untuk meningkatkan soft skill dan hard skill pengurus OSIS.</p>
+</div>
 </div>
 
-</div>
-
-<!-- KEGIATAN 5 -->
-
-<div class="kegiatan kiri">
-
+<div class="kegiatan">
 <img src="img1/charity.jpg">
-
 <div class="text">
-
-<h2>Civic charity</h2>
-
-<p>
-Kegiatan sosial OSIS untuk membantu masyarakat atau warga sekitar
-yang membutuhkan.
-</p>
-
+<h2>Civic Charity</h2>
+<p>Kegiatan sosial OSIS untuk membantu masyarakat atau warga sekitar yang membutuhkan.</p>
 </div>
-
 </div>
-
-<!-- KEGIATAN 6 -->
 
 <div class="kegiatan kanan">
-
 <img src="img1/porseni.jpg">
-
 <div class="text">
-
 <h2>Porseni</h2>
-
-<p>
-adalah perlombaan antar kelas yang diadakan
-setelah ujian semester untuk meningkatkan solidaritas
-dan sportivitas siswa dan juga melestarikan karya seni.
-</p>
-
+<p>Perlombaan antar kelas untuk meningkatkan solidaritas, sportivitas, dan melestarikan seni.</p>
+</div>
 </div>
 
-</div>
-
-<!-- KEGIATAN 7 -->
-
-<div class="kegiatan kiri">
-
+<div class="kegiatan">
 <img src="img1/logis.jpg">
-
 <div class="text">
-
 <h2>LOGIS</h2>
-
-<p>
-Kegiatan OSIS untuk meningkatkan karakter keagamaan siswa 
-dan diadakan lomba-lomba yang berhubungan dengan islam
-</p>
-
+<p>Kegiatan untuk meningkatkan karakter keagamaan siswa dan lomba-lomba Islami.</p>
 </div>
-
 </div>
 
 </div>
