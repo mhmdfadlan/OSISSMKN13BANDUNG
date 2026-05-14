@@ -7,13 +7,19 @@
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
 body{
     background:#050505;
     color:white;
-    font-family:Arial;
-    margin:0;
 }
 
+/* HEADER */
 header{
     background:#0d0d0d;
     border-bottom:2px solid #f5c400;
@@ -21,36 +27,73 @@ header{
     text-align:center;
 }
 
+header h1{
+    font-size:24px;
+}
+
+/* NAV */
 nav{
     margin-top:15px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:20px;
     font-weight:bold;
+    padding:8px 12px;
+    border-radius:8px;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:#f5c400;
+    background:#1a1a1a;
 }
 
+/* CONTAINER */
 .container{
-    padding:50px;
+    padding:20px;
+    max-width:1000px;
+    margin:auto;
 }
 
+/* CARD */
 .card{
     border:2px solid #f5c400;
-    padding:30px;
-    margin-bottom:30px;
+    padding:20px;
+    margin-bottom:20px;
     border-radius:15px;
     background:#111;
 }
 
 .card h2{
     color:#f5c400;
-    margin-bottom:15px;
+    margin-bottom:10px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width:600px){
+
+    header h1{
+        font-size:18px;
+    }
+
+    nav a{
+        font-size:14px;
+        padding:6px 10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+    .card{
+        padding:15px;
+    }
 }
 
 </style>
@@ -74,27 +117,18 @@ nav a:hover{
 <div class="container">
 
 <div class="card">
-
 <h2>Visi</h2>
-
-<p>
-Menjadikan OSIS sebagai organisasi yang aktif,
-kreatif, disiplin, dan bertanggung jawab.
-</p>
-
+<p>Menjadikan OSIS sebagai organisasi yang aktif, kreatif, disiplin, dan bertanggung jawab.</p>
 </div>
 
 <div class="card">
-
 <h2>Misi</h2>
-
 <ul>
 <li>Meningkatkan solidaritas siswa</li>
 <li>Mengembangkan bakat siswa</li>
 <li>Meningkatkan kedisiplinan</li>
 <li>Mengadakan kegiatan positif</li>
 </ul>
-
 </div>
 
 </div>
