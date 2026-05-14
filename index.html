@@ -19,6 +19,8 @@ body{
     color:white;
 }
 
+/* HEADER */
+
 header{
     background:#0d0d0d;
     border-bottom:2px solid #f5c400;
@@ -39,11 +41,14 @@ nav a{
     text-decoration:none;
     margin-left:25px;
     font-weight:bold;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:#f5c400;
 }
+
+/* HERO */
 
 .hero{
     height:85vh;
@@ -52,6 +57,7 @@ nav a:hover{
     align-items:center;
     flex-direction:column;
     text-align:center;
+    padding:20px;
 }
 
 .hero h1{
@@ -63,7 +69,10 @@ nav a:hover{
     margin-top:20px;
     font-size:20px;
     width:60%;
+    line-height:1.8;
 }
+
+/* BUTTON */
 
 button{
     margin-top:30px;
@@ -75,16 +84,74 @@ button{
     border-radius:10px;
     cursor:pointer;
     font-size:16px;
+    transition:0.3s;
 }
 
 button:hover{
     background:#ffd700;
+    transform:scale(1.05);
 }
+
+/* FOOTER */
 
 footer{
     text-align:center;
     padding:20px;
     border-top:2px solid #f5c400;
+    line-height:1.8;
+}
+
+/* ================= RESPONSIVE HP ================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:20px;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        margin-top:15px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin-left:0;
+        font-size:16px;
+    }
+
+    .hero{
+        height:auto;
+        padding:80px 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        width:100%;
+        font-size:16px;
+    }
+
+    button{
+        width:100%;
+        max-width:300px;
+        font-size:15px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:15px;
+    }
+
 }
 
 </style>
