@@ -32,15 +32,23 @@ header{
 
 .logo{
     color:#f5c400;
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
     font-weight:bold;
+    transition:0.3s;
 }
 
 nav a:hover{
@@ -52,6 +60,7 @@ nav a:hover{
 .title{
     text-align:center;
     margin-top:40px;
+    padding:0 20px;
 }
 
 .title h1{
@@ -72,6 +81,7 @@ details{
     border-radius:15px;
     margin-bottom:25px;
     overflow:hidden;
+    transition:0.3s;
 }
 
 summary{
@@ -89,6 +99,7 @@ summary{
 .dropdown-content p{
     margin-bottom:20px;
     line-height:1.8;
+    font-size:17px;
 }
 
 /* CARD */
@@ -126,10 +137,12 @@ summary{
 .card h2{
     margin-top:20px;
     color:#f5c400;
+    font-size:22px;
 }
 
 .card p{
     margin-top:10px;
+    font-size:16px;
 }
 
 /* FOOTER */
@@ -139,6 +152,88 @@ footer{
     text-align:center;
     padding:25px;
     border-top:2px solid #f5c400;
+    line-height:1.8;
+}
+
+/* ================= RESPONSIVE HP ================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:20px;
+        gap:15px;
+    }
+
+    .logo{
+        font-size:24px;
+        text-align:center;
+    }
+
+    nav{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .title h1{
+        font-size:32px;
+        line-height:1.4;
+    }
+
+    .dropdown-container{
+        width:95%;
+    }
+
+    summary{
+        font-size:17px;
+        padding:18px;
+        line-height:1.5;
+    }
+
+    .dropdown-content{
+        padding:20px;
+    }
+
+    .dropdown-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .card-container{
+        gap:20px;
+    }
+
+    .card{
+        width:100%;
+        max-width:320px;
+        padding:20px;
+    }
+
+    .card img{
+        width:120px;
+        height:120px;
+    }
+
+    .card h2{
+        font-size:20px;
+    }
+
+    .card p{
+        font-size:15px;
+    }
+
+    footer{
+        font-size:13px;
+        padding:18px;
+    }
+
 }
 
 </style>
